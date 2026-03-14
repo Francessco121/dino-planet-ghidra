@@ -36,7 +36,7 @@ for line in file(f.absolutePath):  # note, cannot use open(), since that is in G
         else:
             if func is not None:
                 old_name = func.getName()
-                func.setName(name, USER_DEFINED)
+                func.setName(name, SourceType.USER_DEFINED)
                 print("Renamed function {} to {} at address {}".format(old_name, name, address))
             else:
                 func = createFunction(address, name)
